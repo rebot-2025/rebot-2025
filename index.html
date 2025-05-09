@@ -4,46 +4,21 @@
   <meta charset="UTF-8">
   <title>REBot: Reflexive Evasion Robot for Instantaneous Dynamic Obstacle Avoidance</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
   <!-- Bulma CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
   <!-- FontAwesome（可选） -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <!-- Bulma Carousel CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.24/dist/css/bulma-carousel.min.css">
-
   <style>
     body { font-family: 'Noto Sans', sans-serif; }
-
-    .title-container {
-      max-width: 55%;
-      margin: auto;
-    }
-
-    .title-container h1 {
-      margin-bottom: 2.5rem;
-    }
-
-    .main-video {
-      max-width: 50%;
-      margin: auto;
-      display: block;
-    }
-
-    .abstract {
-      max-width: 50%;
-      margin: 2rem auto;
-    }
-
-    .abstract p {
-      text-align: justify;
-      font-size: 1.2rem;
-      line-height: 1.6;
-    }
-
-    #carousel-demo, #carousel-demo-2 {
-      overflow: hidden;
-    }
+    .title-container { max-width: 55%; margin: auto; }
+    .title-container h1 { margin-bottom: 2.5rem; }
+    .main-video { max-width: 50%; margin: auto; display: block; }
+    .abstract { max-width: 50%; margin: 2rem auto; }
+    .abstract p { text-align: justify; font-size: 1.2rem; line-height: 1.6; }
+    #carousel-demo, #carousel-demo-2, #carousel-curriculum1, #carousel-curriculum2,
+    #carousel-poke, #carousel-hit, #carousel-kick { overflow: hidden; }
   </style>
 </head>
 <body>
@@ -53,10 +28,9 @@
   <div class="title-container">
     <h1 class="title is-1">REBot: Reflexive Evasion Robot for Instantaneous Dynamic Obstacle Avoidance</h1>
   </div>
-  <video class="main-video" controls autoplay muted loop playsinline>
-    <source src="video/REBot.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
+<iframe class="main-video" src="https://youtu.be/wCH-K1njsOY" 
+        frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
+</iframe>
 </section>
 
 <!-- 摘要 -->
@@ -73,96 +47,145 @@
 <section class="section">
   <div class="container has-text-centered">
     <h2 class="title is-3">Navigation vs Reflexive Evasion</h2>
-
-    <!-- Navigation 子标题 -->
     <h3 class="title is-4">Navigation</h3>
-    <div class="columns is-4">
-      <div class="column is-half">
-        <video controls autoplay loop muted playsinline style="width: 80%;">
-          <source src="video/navigation1.mp4" type="video/mp4">
-        </video>
-      </div>
-      <div class="column is-half">
-        <video controls autoplay loop muted playsinline style="width: 80%;">
-          <source src="video/navigation2.mp4" type="video/mp4">
-        </video>
-      </div>
+    <div class="columns is-gapless">
+      <div class="column is-1"></div>
+      <div class="column is-5"><video controls autoplay loop muted playsinline style="width:80%;"><source src="video/navigation_front.mp4"></video></div>
+      <div class="column is-5"><video controls autoplay loop muted playsinline style="width:80%;"><source src="video/navigation_left.mp4"></video></div>
+      <div class="column is-1"></div>
     </div>
-
-    <!-- Reflexive Evasion 子标题 -->
     <h3 class="title is-4">Reflexive Evasion</h3>
-    <div class="columns is-4">
-      <div class="column is-half">
-        <video controls autoplay loop muted playsinline style="width: 80%;">
-          <source src="video/reflexive1.mp4" type="video/mp4">
-        </video>
-      </div>
-      <div class="column is-half">
-        <video controls autoplay loop muted playsinline style="width: 80%;">
-          <source src="video/reflexive2.mp4" type="video/mp4">
-        </video>
-      </div>
+    <div class="columns is-gapless">
+      <div class="column is-1"></div>
+      <div class="column is-5"><video controls autoplay loop muted playsinline style="width:80%;"><source src="video/reflexive_front.mp4"></video></div>
+      <div class="column is-5"><video controls autoplay loop muted playsinline style="width:80%;"><source src="video/reflexive_left.mp4"></video></div>
+      <div class="column is-1"></div>
     </div>
   </div>
 </section>
 
-<!-- 视频轮播 1 -->
+<!-- Simulation Demos -->
 <section class="section">
   <div class="container">
     <h2 class="title is-3 has-text-centered">Simulation Demos</h2>
-    <div id="carousel-demo" class="carousel carousel-animated carousel-animate-slide">
-      <div class="item-1">
-        <video controls autoplay loop muted playsinline>
-          <source src="video/video1.mp4" type="video/mp4">
+    <h3 class="title is-4 has-text-centered">Curriculum 1</h3>
+    <div class="has-text-centered"><img src="figure/Ball.png" style="max-width:30%; margin-bottom:1rem;"></div>
+    <div id="carousel-curriculum1" class="carousel carousel-animated carousel-animate-slide">
+      <div class="item-1"><video controls autoplay loop muted playsinline><source src="video/sim_static_front.mp4"></video></div>
+      <div class="item-2"><video controls autoplay loop muted playsinline><source src="video/sim_static_left.mp4"></video></div>
+      <div class="item-3"><video controls autoplay loop muted playsinline><source src="video/sim_static_top.mp4"></video></div>
+      <div class="item-4"><video controls autoplay loop muted playsinline><source src="video/sim_static_back.mp4"></video></div>
+      <div class="item-5"><video controls autoplay loop muted playsinline><source src="video/sim_static_right.mp4"></video></div>
+      <div class="item-6"><video controls autoplay loop muted playsinline><source src="video/sim_static_bottom.mp4"></video></div>
+    </div>
+    <h3 class="title is-4 has-text-centered" style="margin-top:2rem;">Curriculum 2</h3>
+    <div id="carousel-curriculum2" class="carousel carousel-animated carousel-animate-slide">
+      <div class="item-1"><video controls autoplay loop muted playsinline><source src="video/sim_dynamic_front.mp4"></video></div>
+      <div class="item-2"><video controls autoplay loop muted playsinline><source src="video/sim_dynamic_left.mp4"></video></div>
+      <div class="item-3"><video controls autoplay loop muted playsinline><source src="video/sim_dynamic_top.mp4"></video></div>
+      <div class="item-4"><video controls autoplay loop muted playsinline><source src="video/sim_dynamic_back.mp4"></video></div>
+      <div class="item-5"><video controls autoplay loop muted playsinline><source src="video/sim_dynamic_right.mp4"></video></div>
+      <div class="item-6"><video controls autoplay loop muted playsinline><source src="video/sim_dynamic_bottom.mp4"></video></div>
+    </div>
+  </div>
+</section>
+
+<!-- Real-Robot Demos -->
+<section class="section">
+  <div class="container">
+    <h2 class="title is-3 has-text-centered">Real-Robot Demos</h2>
+    <!-- Poke -->
+    <h3 class="title is-4 has-text-centered">Poke</h3>
+    <div id="carousel-poke" class="carousel carousel-animated carousel-animate-slide">
+      <div class="item-1"><video controls autoplay loop muted playsinline><source src="video/poke_front.mp4"></video></div>
+      <div class="item-2"><video controls autoplay loop muted playsinline><source src="video/poke_left.mp4"></video></div>
+      <div class="item-3"><video controls autoplay loop muted playsinline><source src="video/poke_right.mp4"></video></div>
+      <div class="item-4"><video controls autoplay loop muted playsinline><source src="video/poke_left_front.mp4"></video></div>
+      <div class="item-5"><video controls autoplay loop muted playsinline><source src="video/poke_right_front.mp4"></video></div>
+    </div>
+    <!-- Hit -->
+    <h3 class="title is-4 has-text-centered" style="margin-top:2rem;">Hit</h3>
+    <div id="carousel-hit" class="carousel carousel-animated carousel-animate-slide">
+      <div class="item-1"><video controls autoplay loop muted playsinline><source src="video/hit_front.mp4"></video></div>
+      <div class="item-2"><video controls autoplay loop muted playsinline><source src="video/hit_left.mp4"></video></div>
+      <div class="item-3"><video controls autoplay loop muted playsinline><source src="video/hit_right.mp4"></video></div>
+      <div class="item-4"><video controls autoplay loop muted playsinline><source src="video/hit_left_front.mp4"></video></div>
+      <div class="item-5"><video controls autoplay loop muted playsinline><source src="video/hit_right_front.mp4"></video></div>
+    </div>
+    <!-- Kick -->
+    <h3 class="title is-4 has-text-centered" style="margin-top:2rem;">Kick</h3>
+    <div id="carousel-kick" class="carousel carousel-animated carousel-animate-slide">
+      <div class="item-1"><video controls autoplay loop muted playsinline><source src="video/kick_front.mp4"></video></div>
+      <div class="item-2"><video controls autoplay loop muted playsinline><source src="video/kick_left.mp4"></video></div>
+      <div class="item-3"><video controls autoplay loop muted playsinline><source src="video/kick_right.mp4"></video></div>
+      <div class="item-4"><video controls autoplay loop muted playsinline><source src="video/kick_left_front.mp4"></video></div>
+      <div class="item-5"><video controls autoplay loop muted playsinline><source src="video/kick_right_front.mp4"></video></div>
+    </div>
+    <!-- Multi-time -->
+<h3 class="title is-4 has-text-centered" style="margin-top:2rem;">Multi-time</h3>
+<div class="container has-text-centered">
+  <div class="columns is-gapless">
+    <div class="column is-1"></div>
+    <div class="column is-5">
+      <video controls autoplay loop muted playsinline style="width:80%;">
+        <source src="video/multi_poke_left.mp4">
+      </video>
+    </div>
+    <div class="column is-5">
+      <video controls autoplay loop muted playsinline style="width:80%;">
+        <source src="video/multi_poke_right.mp4">
+      </video>
+    </div>
+    <div class="column is-1"></div>
+  </div>
+  <div class="columns is-gapless">
+    <div class="column is-1"></div>
+    <div class="column is-5">
+      <video controls autoplay loop muted playsinline style="width:80%;">
+        <source src="video/multi_kick_left.mp4">
+      </video>
+    </div>
+    <div class="column is-5">
+      <video controls autoplay loop muted playsinline style="width:80%;">
+        <source src="video/multi_kick_right.mp4">
+      </video>
+    </div>
+    <div class="column is-1"></div>
+  </div>
+</div>
+    <!-- Dog Twin -->
+    <h3 class="title is-4 has-text-centered" style="margin-top:2rem;">Dog Twin</h3>
+    <div class="has-text-centered">
+      <video controls autoplay loop muted playsinline style="max-width:60%;"><source src="video/dog_twin.mp4"></video>
+    </div>
+  </div>
+</section>
+
+<!-- Failure Cases -->
+<section class="section">
+  <div class="container has-text-centered">
+    <h2 class="title is-3">Failure Cases</h2>
+    <div class="columns is-gapless is-centered">
+      <div class="column is-4">
+        <video controls autoplay loop muted playsinline style="width:100%;">
+          <source src="video/fail_hit_back.mp4" type="video/mp4">
         </video>
       </div>
-      <div class="item-2">
-        <video controls autoplay loop muted playsinline>
-          <source src="video/video2.mp4" type="video/mp4">
+      <div class="column is-4">
+        <video controls autoplay loop muted playsinline style="width:100%;">
+          <source src="video/fail_hit_fast.mp4" type="video/mp4">
         </video>
       </div>
-      <div class="item-3">
-        <video controls autoplay loop muted playsinline>
-          <source src="video/video3.mp4" type="video/mp4">
-        </video>
-      </div>
-      <div class="item-4">
-        <video controls autoplay loop muted playsinline>
-          <source src="video/video4.mp4" type="video/mp4">
+      <div class="column is-4">
+        <video controls autoplay loop muted playsinline style="width:100%;">
+          <source src="video/fail_poke_back.mp4" type="video/mp4">
         </video>
       </div>
     </div>
   </div>
 </section>
 
-<!-- 视频轮播 2 -->
-<section class="section">
-  <div class="container">
-    <h2 class="title is-3 has-text-centered">Real-Robot Demos</h2>
-    <div id="carousel-demo-2" class="carousel carousel-animated carousel-animate-slide">
-      <div class="item-1">
-        <video controls autoplay loop muted playsinline>
-          <source src="video/video1.mp4" type="video/mp4">
-        </video>
-      </div>
-      <div class="item-2">
-        <video controls autoplay loop muted playsinline>
-          <source src="video/video2.mp4" type="video/mp4">
-        </video>
-      </div>
-      <div class="item-3">
-        <video controls autoplay loop muted playsinline>
-          <source src="video/video3.mp4" type="video/mp4">
-        </video>
-      </div>
-      <div class="item-4">
-        <video controls autoplay loop muted playsinline>
-          <source src="video/video4.mp4" type="video/mp4">
-        </video>
-      </div>
-    </div>
-  </div>
-</section>
+
 
 <!-- Method 图片 -->
 <section class="section">
@@ -172,34 +195,18 @@
   </div>
 </section>
 
-<!-- Bulma Carousel JS -->
 <script src="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.24/dist/js/bulma-carousel.min.js"></script>
-
 <script>
   document.addEventListener('DOMContentLoaded', function () {
-    bulmaCarousel.attach('#carousel-demo', {
-      slidesToScroll: 1,
-      slidesToShow: 3,
-      loop: true,
-      autoplay: true,
-      pauseOnHover: true,
-    });
-
-    bulmaCarousel.attach('#carousel-demo-2', {
-      slidesToScroll: 1,
-      slidesToShow: 3,
-      loop: true,
-      autoplay: true,
-      pauseOnHover: true,
-    });
+    bulmaCarousel.attach('#carousel-demo', { slidesToScroll:1, slidesToShow:3, loop:true, autoplay:true, pauseOnHover:true });
+    bulmaCarousel.attach('#carousel-demo-2', { slidesToScroll:1, slidesToShow:3, loop:true, autoplay:true, pauseOnHover:true });
+    bulmaCarousel.attach('#carousel-curriculum1', { slidesToScroll:1, slidesToShow:3, loop:true, autoplay:true, pauseOnHover:true });
+    bulmaCarousel.attach('#carousel-curriculum2', { slidesToScroll:1, slidesToShow:3, loop:true, autoplay:true, pauseOnHover:true });
+    bulmaCarousel.attach('#carousel-poke', { slidesToScroll:1, slidesToShow:3, loop:true, autoplay:true, pauseOnHover:true });
+    bulmaCarousel.attach('#carousel-hit', { slidesToScroll:1, slidesToShow:3, loop:true, autoplay:true, pauseOnHover:true });
+    bulmaCarousel.attach('#carousel-kick', { slidesToScroll:1, slidesToShow:3, loop:true, autoplay:true, pauseOnHover:true });
   });
 </script>
 
 </body>
 </html>
-
-
-
-
-
-
